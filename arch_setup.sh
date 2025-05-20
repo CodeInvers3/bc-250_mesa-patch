@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 echo "Installing Mesa 3D patched"
-sudo pacman -U mesa-*-x86_64.pkg.tar.zst
+cd mesa-git
+updpkgsums
+makepkg -si
 
 # RADV_DEBUG
 echo "set mode RADV DEBUG"
